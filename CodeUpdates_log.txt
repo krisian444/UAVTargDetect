@@ -1,0 +1,28 @@
+Target Detection Video Code:
+
+V1.1:
+- updated ranges for color mask
+- added object area pixel size as a variable (flat number)
+
+
+V1.2:
+- updated color ranges for mask
+- added the calculation for the size of object area in the image instead of having it as a flat number
+
+V1.3: 
+- consolidated the upper and lower bounds of each color into a single array each to reduce amount of arrays needed to generate
+- moved defining color ranges outside of while loop
+_______________________________________________________________________________________________________
+Centroid Calculation:
+
+V2:
+- added while loop when asking for user input, keeps asking for valid input
+- updated color ranges for mask 
+- added calculation for size of object area in image instead of flat number
+- displays target number if there are multiple targets on photo
+- displays centroid location next to target in reference to image frame / image space
+
+V2.1 (April 1):
+- added erosion and dilation for Mask
+- changed RET_TREE to RET_External for findContours - only gets the most external contour
+- 
