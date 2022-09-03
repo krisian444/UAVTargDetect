@@ -101,9 +101,9 @@ for pic, contour in enumerate(contours):
         img = cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 4)
         cv2.putText(img, "Red Target", (x,y-20), cv2.FONT_HERSHEY_SIMPLEX, 3.0, (0,0,255), 6)
 
+
 # create contour to surround yellow ==========
 contours, hierarchy = cv2.findContours(yellowMask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
 
 for pic, contour in enumerate(contours):
     area = cv2.contourArea(contour)
