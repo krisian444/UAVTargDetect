@@ -1,3 +1,5 @@
 # UAVTargDetect
 
-This is the target / colour detection system (without full Raspberry Pi implementation). ReadMe is WIP.
+This is the target / colour detection system (without full Raspberry Pi implementation). The target detection algorithm was designed around the SAE Aero Design 2022 competition rules which the client (Aero Design) is participating in. The targets are circular coloured targets in a flat field next to the runway at competition grounds. The files in this repo include: target detection in an image, drawing targets on an image to generate test cases, and target detection with live video feed.
+
+Due to how Python scripts are executed, when executed on the Raspberry Pi 4, the scripts suffer from extreme lag as the process is very I/O heavy (reading from a video feed from a camera). In order to alleviate this issue, multithreading with Python can be implemented such that grabbing frames from the video is handled on a separate thread (keeps polling for new frames) and the main thread is simply processing on the current frame. Note that the script in this repo hasn't been tested on the RPi 4 yet (I don't have access to one at the moment), but it does function normally just with the webcam.
