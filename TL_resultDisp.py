@@ -1,4 +1,4 @@
-# This script is to display the X, Y coordinates in image frame of target
+# This script is to display the X, Y coordinates in image frame of target as part of the target localization program
 # Display GPS coordinates of target
 # 
 
